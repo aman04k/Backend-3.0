@@ -1,0 +1,18 @@
+ req ka matlab (Request):
+req ka full form hota hai Request.
+
+Jab user ya client server se kuch maangta hai, tab woh request bhejta hai.
+
+Usme user ka data hota hai — jaise form ke through bheja gaya data, URL params, headers, body, etc.
+
+Example:
+Agar user login form bharta hai aur submit karta hai, toh req.body mein uska username aur password hota hai.
+
+🟢 Use karte hain jab user ka data lena ho.
+
+🔄 res ka matlab (Response):
+res ka full form hota hai Response.
+
+Server user ko jo jawab (response) bhejta hai, woh res ke through jaata hai.
+
+Jaise ki: status code, JSON data, HTML page, message, etc.
