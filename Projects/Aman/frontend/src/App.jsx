@@ -1,12 +1,13 @@
-import React from 'react';
-import RegistrationForm from './RegistrationForm';
+import React from 'react'
+import RegistrationForm from './RegistrationForm'
 
 function App() {
   return (
-    <div>
-      <RegistrationForm />
-    </div>
-  );
+
+    <>
+     <RegistrationForm />
+    </>
+  )
 }
 
-export default App;
+export default App
