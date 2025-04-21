@@ -15,7 +15,7 @@ app.get('/products', async (req, res) => {
         const products = await Product.find({});
         res.render('products', { products });
     } catch (e) {
-        console.log("❌ Error in /products route:", e); // 👈 Add this
+        console.log(" Error in /products route:", e); 
         res.status(500).send('Something went wrong');
     }
 });
