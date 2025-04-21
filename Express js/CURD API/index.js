@@ -6,6 +6,21 @@ const app = express()
 
 app.use(express.json())
 
+app.set('view engine', 'ejs');
+
+
+
+app.get('/products', async (req, res) => {
+    try {
+        const products = await Product.find({});
+        res.render('products', { products });
+    } catch (e) {
+        console.log("❌ Error in /products route:", e); // 👈 Add this
+        res.status(500).send('Something went wrong');
+    }
+});
+
+
 app.get('/', (req, res) => {
     res.send('hello world')
 })
@@ -70,7 +85,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/node_api')
   .then(() => {
       console.log('Database Connection Successfull!')
       app.listen(5000, () => {
-          console.log("server started")
+          console.log("server started at port 5000")
       })
   })
   .catch((err) => {
